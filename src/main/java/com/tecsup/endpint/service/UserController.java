@@ -14,6 +14,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+
     @PostMapping("/auth")
     public ResponseEntity<String> login(@RequestBody User user) {
         String email = user.getEmail();
@@ -32,6 +33,7 @@ public class UserController {
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Unknown error");
         }
     }
+
     public enum LoginResult {
         LOGIN_SUCCESSFUL,
         INVALID_CREDENTIALS,

@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "restaurant")
+@Table(name = "server_restaurant")
 public class Restaurant {
 
     @Id
